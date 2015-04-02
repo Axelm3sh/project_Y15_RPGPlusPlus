@@ -21,7 +21,7 @@ public:
 	Dialogue();
 	~Dialogue();
 
-	void Dialogue(string text, vector<string> selections);
+	Dialogue(string text, vector<string> selections);
 	int Activate();
 
 private:

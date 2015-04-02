@@ -1,9 +1,20 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <utility>
+#include <cstdlib>
+#include <ctime>
 
 
-int main()
+#include "c_Dialogue.h"
+#include "c_Creature.h"
+
+//Function
+// New character menu Prototype
+Creature dialogue_newchar();
+
+int main(void)
 {
-
-
-
-	return 0;
+    return 0;
 }
