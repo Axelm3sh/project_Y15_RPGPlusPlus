@@ -16,7 +16,7 @@ Dialogue::~Dialogue()
 
 }
 
-void Dialogue::Dialogue(string text, vector<string> selections)
+Dialogue::Dialogue(string text, vector<string> selections)
 {
 	description = text;
 	choices = selections;
