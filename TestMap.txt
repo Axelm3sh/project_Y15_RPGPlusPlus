@@ -1,0 +1,24 @@
+TestMap
+Area One
+This is the first test area
+end
+Area Two
+none
+none
+none
+
+Area Two
+This is the second test area
+end
+Area Three
+Area One
+none
+none
+
+Area Three
+This is the third test area
+end
+none
+Area Two
+none
+none
