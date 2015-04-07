@@ -1,5 +1,20 @@
 #include "c_Creature.h"
 
+// Default Constructor
+Creature::Creature()
+{
+	creatureName.clear();
+	className.clear();
+
+	health		= 10;
+	maxHealth	= 10;
+	str			= 10;
+	end			= 10;
+	dex			= 10;
+	hitRate		= 0;
+	level		= 1;
+	experience	= 0;
+}
 //NonDefault Constructor
 Creature::Creature(string cName, int cHealth, int cStr, int cEndr,
     int cDex, double cHitRate, unsigned int cLevel = 1, string cClassName = "")
@@ -14,6 +29,24 @@ Creature::Creature(string cName, int cHealth, int cStr, int cEndr,
     className = cClassName;
     level = cLevel;
     experience = 0;
+}
+
+// Destructor
+Creature::~Creature()
+{
+
+}
+
+// Sets the name of the creature
+void Creature::SetName(string aName)
+{
+	creatureName = aName;
+}
+
+// Sets the class of the creature
+void Creature::SetClass(string aClass)
+{
+	className = aClass;
 }
 
 // Calculates the experience required to reach a certain level,
@@ -99,4 +132,73 @@ bool Creature::levelUp()
     }
 
     return levelAccquired;
+}
+
+// Returns the name of the creature
+string Creature::GetName()		const
+{
+	return creatureName;
+}
+
+// Returns the class of the creature
+string Creature::GetClass()		const
+{
+	return className;
+}
+
+// Returns the creature's strength
+int Creature::GetStrength()		const
+{
+	return str;
+}
+
+// Returns the creature's endurance
+int Creature::GetEndurance()	const
+{
+	return end;
+}
+
+// Returns the creature's dexterity
+int Creature::GetDexterity()	const
+{
+	return dex;
+}
+
+// Returns the creature's health
+int Creature::GetHealth()		const
+{
+	return health;
+}
+
+// Returns the creature's max health
+int Creature::GetMaxHealth()	const
+{
+	return maxHealth;
+}
+
+// Returns the creature's hit rate
+int Creature::GetHitRate()		const
+{
+	return hitRate;
+}
+
+// Returns the creature's level
+int Creature::GetLevel()		const
+{
+	return level;
+}
+
+// Returns the creature's experience
+int Creature::GetExperience()	const
+{
+	return experience;
+}
+
+// Prints the creature's information to the screen
+void Creature::Print()			const
+{
+	cout << creatureName ;
+	cout << " LEVEL: " 	<< level;
+	cout << " HEALTH: " << health 		<< '/' 	<< maxHealth;
+	cout << " EXP: "	<< experience 	<< endl;
 }
